@@ -19,4 +19,18 @@ object Utils {
 
         return result
     }
+
+    fun toInitials(firstName: String?, lastName: String?): String? {
+        var initialString = ""
+
+        if (firstName != null && firstName.trim() != "") {
+            initialString += firstName[0].toUpperCase()
+        }
+
+        if (lastName != null && lastName.trim() != "") {
+            initialString += lastName[0].toUpperCase()
+        }
+
+        return if (initialString != "") initialString else null
+    }
 }
